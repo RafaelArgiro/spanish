@@ -85,6 +85,23 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Build Tense and Pronoun Decks",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/build/make-decks.ps1"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }
