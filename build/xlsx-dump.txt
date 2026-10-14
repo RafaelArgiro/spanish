@@ -1,0 +1,120 @@
+﻿================ Cards_Pronouns.xlsx ================
+---- xl/worksheets/sheet1.xml ----
+sheetFormatPr: defaultColWidth=8.7265625 defaultRowHeight=28.5 customHeight=
+col min=1 max=1 width=35.08984375 customWidth=1
+col min=2 max=2 width=8.7265625 customWidth=1
+col min=3 max=4 width=35.08984375 customWidth=1
+col min=5 max=5 width=8.7265625 customWidth=
+col min=6 max=6 width=35.08984375 customWidth=1
+col min=7 max=16384 width=8.7265625 customWidth=
+pageMargins L=0.7 R=0.7 T=0.75 B=0.75
+pageSetup orientation=portrait paperSize=9 scale=
+row 1 ht=113.4 | A1[s1]=Yo | C1[s1]=Tú | D1[s1]=I | F1[s1]=You
+row 2 ht=5.75 | 
+row 3 ht=113.4 | A3[s1]=Él/Ella/Usted | C3[s1]=Nosotros | D3[s1]=He/She/You (formal) | F3[s1]=We
+row 4 ht=5.75 | 
+row 5 ht=113.4 | A5[s1]=Vosotros / Vosotras | C5[s1]=Ellos/Ellas/Ustedes | D5[s1]=You (plural) | F5[s1]=They / You (formal)
+row 6 ht=5.75 | 
+row 7 ht=113 | A7[s1]=Yo | C7[s1]=Tú | D7[s1]=I | F7[s1]=You
+row 8 ht=5.75 | 
+row 9 ht=113.4 | A9[s1]=Él/Ella/Usted | C9[s1]=Nosotros | D9[s1]=He/She/You (formal) | F9[s1]=We
+row 10 ht=5.75 | 
+row 11 ht=113.4 | A11[s1]=Vosotros / Vosotras | C11[s1]=Ellos/Ellas/Ustedes | D11[s1]=You (plural) | F11[s1]=They / You (formal)
+row 12 ht=5.75 | 
+
+================ Cards_Template.xlsx ================
+---- xl/worksheets/sheet1.xml ----
+sheetFormatPr: defaultColWidth=8.7265625 defaultRowHeight=14.5 customHeight=
+col min=1 max=1 width=25.08984375 customWidth=1
+col min=2 max=2 width=2.453125 customWidth=1
+col min=3 max=3 width=25.08984375 customWidth=1
+col min=4 max=4 width=2.453125 customWidth=1
+col min=5 max=5 width=25.08984375 customWidth=1
+pageMargins L=0.7 R=0.7 T=0.75 B=0.75
+pageSetup orientation=portrait paperSize=9 scale=
+row 1 ht=85 | 
+row 2 ht=5.75 | 
+row 3 ht=85 | 
+row 4 ht=5.75 | 
+row 5 ht=85 | 
+row 6 ht=5.75 | 
+row 7 ht=85 | 
+row 8 ht=5.75 | 
+row 9 ht=85 | 
+row 10 ht=5.75 | 
+row 11 ht=85 | 
+row 12 ht=5.75 | 
+row 13 ht=85 | 
+row 14 ht=5.75 | 
+row 15 ht=85 | 
+
+================ Cards_Template_Vebs.xlsx ================
+---- xl/worksheets/sheet1.xml ----
+sheetFormatPr: defaultColWidth=8.7265625 defaultRowHeight=28.5 customHeight=
+col min=1 max=1 width=25.08984375 customWidth=1
+col min=2 max=2 width=2.453125 customWidth=1
+col min=3 max=3 width=25.08984375 customWidth=1
+col min=4 max=4 width=2.453125 customWidth=1
+col min=5 max=5 width=25.08984375 customWidth=1
+col min=6 max=16384 width=8.7265625 customWidth=
+pageMargins L=0.7 R=0.7 T=0.75 B=0.75
+pageSetup orientation=portrait paperSize=9 scale=
+row 1 ht=85 | A1[s1]=Ser | C1[s1]=Estar | E1[s1]=Tener
+row 2 ht=5.75 | 
+row 3 ht=85 | A3[s1]=Hacer | C3[s1]=Hacer | E3[s1]=Poder
+row 4 ht=5.75 | 
+row 5 ht=85 | A5[s1]=Decir | C5[s1]=Ir | E5[s1]=Dar
+row 6 ht=5.75 | 
+row 7 ht=85 | A7[s1]=Saber | C7[s1]=Querer | E7[s1]=Llegar
+row 8 ht=5.75 | 
+row 9 ht=85 | A9[s1]=Paser | C9[s1]=Deber | E9[s1]=Poner
+row 10 ht=5.75 | 
+row 11 ht=85 | A11[s1]=Parecer | C11[s1]=Quedar | E11[s1]=Creer
+row 12 ht=5.75 | 
+row 13 ht=85 | A13[s1]=Hablar | C13[s1]=Llevar | E13[s1]=Llamar
+row 14 ht=5.75 | 
+row 15 ht=85 | A15[s1]=Venir | C15[s1]=Pensar | E15[s1]=Salir
+
+================ Cards_Tenses.xlsx ================
+---- xl/worksheets/sheet1.xml ----
+sheetFormatPr: defaultColWidth=8.7265625 defaultRowHeight=28.5 customHeight=
+col min=1 max=1 width=35.08984375 customWidth=1
+col min=2 max=2 width=8.7265625 customWidth=1
+col min=3 max=4 width=35.08984375 customWidth=1
+col min=5 max=5 width=8.7265625 customWidth=
+col min=6 max=6 width=35.08984375 customWidth=1
+col min=7 max=16384 width=8.7265625 customWidth=
+pageMargins L=0.7 R=0.7 T=0.75 B=0.75
+pageSetup orientation=portrait paperSize=9 scale=
+row 1 ht=113.4 | A1[s2]=El Presente | C1[s2]=El Presente | D1[s4]=El Pretérito 
+Perfecto | F1[s4]=El Pretérito 
+Perfecto
+row 2 ht=5.75 | 
+row 3 ht=113.4 | A3[s2]=El Presente | C3[s2]=El Presente | D3[s4]=El Pretérito 
+Perfecto | F3[s4]=El Pretérito 
+Perfecto
+row 4 ht=5.75 | 
+row 5 ht=113.4 | A5[s2]=El Presente | C5[s2]=El Presente | D5[s4]=El Pretérito 
+Perfecto | F5[s4]=El Pretérito 
+Perfecto
+row 6 ht=5.75 | 
+row 7 ht=113 | A7[s3]=El Presente 
+Progresivo | C7[s3]=El Presente 
+Progresivo | D7[s5]=El Futuro
+Próximo | F7[s5]=El Futuro
+Próximo
+row 8 ht=5.75 | 
+row 9 ht=113.4 | A9[s3]=El Presente 
+Progresivo | C9[s3]=El Presente 
+Progresivo | D9[s5]=El Futuro
+Próximo | F9[s5]=El Futuro
+Próximo
+row 10 ht=5.75 | 
+row 11 ht=113.4 | A11[s3]=El Presente 
+Progresivo | C11[s3]=El Presente 
+Progresivo | D11[s5]=El Futuro
+Próximo | F11[s5]=El Futuro
+Próximo
+row 12 ht=5.75 | 
+
+

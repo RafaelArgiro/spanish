@@ -1,0 +1,45 @@
+﻿TOTAL VERBS: 225
+
+--- exact conjugation value ---
+  85  regular -ar
+  17  stem e>ie
+  15  stem o>ue
+  12  irregular (c>zc)
+  12  regular -ir
+  11  regular -er
+  10  regular -ar (accent ú)
+   7  stem adds y
+   7  irregular
+   6  irregular (-go)
+   6  regular -ar (accent í)
+   4  irregular (-igo)
+   4  regular -er (g>j)
+   4  stem e>i
+   3  regular -ir (g>j)
+   3  irregular (c>z)
+   3  stem e>i (gu>g)
+   2  irregular (e>ie / -go)
+   2  stem e>i (g>j)
+   2  regular -ir (gu>g)
+   1  irregular (yo sé)
+   1  irregular (e>i / -go)
+   1  irregular (yo quepo)
+   1  stem u>ue
+   1  regular -ar (indirect object)
+   1  like poner
+   1  irregular (dar)
+   1  regular -ir (accent ú)
+   1  like tener
+   1  stem e>i (accent)
+
+--- split: simple vs reflexive ---
+ 145  simple
+  80  reflexive
+
+--- broad family ---
+ 102  regular -ar
+  50  stem-changing
+  38  irregular
+  18  regular -ir
+  15  regular -er
+   2  follows another verb

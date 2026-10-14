@@ -1,0 +1,226 @@
+rank,verb,english,form,conjugation,example_es,example_en
+1,ser,to be (essence/identity),simple,irregular,Ella es profesora.,She is a teacher.
+2,estar,to be (state/location),simple,irregular,Estoy en casa.,I am at home.
+3,tener,to have,simple,irregular (e>ie / -go),Tengo dos hermanos.,I have two brothers.
+4,hacer,to do / to make,simple,irregular (-go),Hago la cena todos los días.,I make dinner every day.
+5,poder,can / to be able to,simple,stem o>ue,No puedo ir hoy.,I cannot go today.
+6,decir,to say / to tell,simple,irregular (e>i / -go),Dime la verdad.,Tell me the truth.
+7,ir,to go,simple,irregular,Vamos al mercado.,We are going to the market.
+8,ver,to see,simple,irregular,No veo nada.,I do not see anything.
+9,dar,to give,simple,irregular,Te doy mi palabra.,I give you my word.
+10,saber,to know (facts),simple,irregular (yo sé),No sé qué hacer.,I do not know what to do.
+11,querer,to want / to love,simple,stem e>ie,Quiero un café.,I want a coffee.
+12,llegar,to arrive,simple,regular -ar,El tren llega tarde.,The train arrives late.
+13,pasar,to pass / to happen,simple,regular -ar,¿Qué pasa aquí?,What is happening here?
+14,deber,should / to owe,simple,regular -er,Debes descansar más.,You should rest more.
+15,poner,to put / to place,simple,irregular (-go),Pon el libro en la mesa.,Put the book on the table.
+16,parecer,to seem / to look like,simple,irregular (c>zc),Parece fácil.,It seems easy.
+17,quedar,to remain / to be left,simple,regular -ar,Quedan tres días.,Three days are left.
+18,creer,to believe / to think,simple,regular -er,Creo que tienes razón.,I think you are right.
+19,hablar,to speak / to talk,simple,regular -ar,Hablo español e inglés.,I speak Spanish and English.
+20,llevar,to carry / to wear / to take,simple,regular -ar,Llevo una chaqueta azul.,I am wearing a blue jacket.
+21,dejar,to leave / to let,simple,regular -ar,Deja las llaves aquí.,Leave the keys here.
+22,seguir,to follow / to continue,simple,stem e>i (gu>g),Sigue por esta calle.,Continue along this street.
+23,encontrar,to find,simple,stem o>ue,No encuentro mi teléfono.,I cannot find my phone.
+24,llamar,to call,simple,regular -ar,Te llamo mañana.,I will call you tomorrow.
+25,venir,to come,simple,irregular (e>ie / -go),¿Vienes conmigo?,Are you coming with me?
+26,pensar,to think,simple,stem e>ie,Pienso mucho en eso.,I think about that a lot.
+27,salir,to leave / to go out,simple,irregular (-go),Salgo a las ocho.,I leave at eight.
+28,volver,to return / to come back,simple,stem o>ue,Vuelvo en cinco minutos.,I will be back in five minutes.
+29,tomar,to take / to drink,simple,regular -ar,Tomo café por la mañana.,I drink coffee in the morning.
+30,conocer,to know (people/places),simple,irregular (c>zc),¿Conoces a Marta?,Do you know Marta?
+31,vivir,to live,simple,regular -ir,Vivo en Madrid.,I live in Madrid.
+32,sentir,to feel / to be sorry,simple,stem e>ie,Siento mucho frío.,I feel very cold.
+33,tratar,to try / to treat,simple,regular -ar,Trato de entenderlo.,I try to understand it.
+34,mirar,to look at / to watch,simple,regular -ar,Mira el cielo.,Look at the sky.
+35,contar,to count / to tell,simple,stem o>ue,Cuéntame un cuento.,Tell me a story.
+36,empezar,to begin / to start,simple,stem e>ie,La clase empieza ahora.,The class starts now.
+37,esperar,to wait / to hope,simple,regular -ar,Espero tu respuesta.,I await your answer.
+38,buscar,to look for / to search,simple,regular -ar,Busco trabajo.,I am looking for a job.
+39,existir,to exist,simple,regular -ir,Existen muchas opciones.,Many options exist.
+40,entrar,to enter / to go in,simple,regular -ar,Entra sin llamar.,Come in without knocking.
+41,trabajar,to work,simple,regular -ar,Trabajo desde casa.,I work from home.
+42,escribir,to write,simple,regular -ir,Escribo cartas a mano.,I write letters by hand.
+43,perder,to lose / to miss,simple,stem e>ie,Siempre pierdo el autobús.,I always miss the bus.
+44,producir,to produce,simple,irregular (c>zc),La fábrica produce coches.,The factory produces cars.
+45,ocurrir,to occur / to happen,simple,regular -ir,El accidente ocurrió ayer.,The accident happened yesterday.
+46,entender,to understand,simple,stem e>ie,No entiendo la pregunta.,I do not understand the question.
+47,pedir,to ask for / to order,simple,stem e>i,Pido la cuenta por favor.,I am asking for the bill please.
+48,recibir,to receive,simple,regular -ir,Recibí tu mensaje.,I received your message.
+49,recordar,to remember,simple,stem o>ue,No recuerdo su nombre.,I do not remember his name.
+50,terminar,to finish / to end,simple,regular -ar,Termino a las seis.,I finish at six.
+51,permitir,to allow / to permit,simple,regular -ir,No permiten fumar aquí.,They do not allow smoking here.
+52,aparecer,to appear / to show up,simple,irregular (c>zc),Apareció de repente.,He appeared suddenly.
+53,conseguir,to get / to obtain,simple,stem e>i (gu>g),Conseguí dos entradas.,I got two tickets.
+54,comenzar,to begin / to commence,simple,stem e>ie,Comienza el espectáculo.,The show is beginning.
+55,servir,to serve / to be useful,simple,stem e>i,Esto no sirve.,This is useless.
+56,sacar,to take out / to get,simple,regular -ar,Saca la basura.,Take out the trash.
+57,necesitar,to need,simple,regular -ar,Necesito ayuda.,I need help.
+58,mantener,to maintain / to keep,simple,like tener,Mantén la calma.,Keep calm.
+59,resultar,to turn out / to result,simple,regular -ar,Resultó ser verdad.,It turned out to be true.
+60,leer,to read,simple,regular -er,Leo antes de dormir.,I read before sleeping.
+61,caer,to fall,simple,irregular (-igo),Las hojas caen en otoño.,The leaves fall in autumn.
+62,cambiar,to change,simple,regular -ar,Quiero cambiar de trabajo.,I want to change jobs.
+63,presentar,to present / to introduce,simple,regular -ar,Te presento a mi hermano.,Let me introduce my brother to you.
+64,crear,to create,simple,regular -ar,Creamos una empresa nueva.,We created a new company.
+65,abrir,to open,simple,regular -ir,Abre la ventana.,Open the window.
+66,considerar,to consider,simple,regular -ar,Considero tu oferta.,I am considering your offer.
+67,oír,to hear,simple,irregular,No te oigo bien.,I cannot hear you well.
+68,acabar,to finish / to have just done,simple,regular -ar,Acabo de llegar.,I have just arrived.
+69,convertir,to convert / to turn into,simple,stem e>ie,Convirtieron el garaje en oficina.,They turned the garage into an office.
+70,ganar,to win / to earn,simple,regular -ar,Ganamos el partido.,We won the match.
+71,formar,to form / to make up,simple,regular -ar,Formamos un buen equipo.,We make a good team.
+72,traer,to bring,simple,irregular (-igo),Trae una silla.,Bring a chair.
+73,partir,to leave / to split,simple,regular -ir,Partimos al amanecer.,We leave at dawn.
+74,morir,to die,simple,stem o>ue,Las plantas murieron.,The plants died.
+75,aceptar,to accept,simple,regular -ar,Acepto tus condiciones.,I accept your conditions.
+76,realizar,to carry out / to achieve,simple,regular -ar,Realizamos el proyecto.,We carried out the project.
+77,suponer,to suppose / to assume,simple,like poner,Supongo que sí.,I suppose so.
+78,comprender,to understand / to comprise,simple,regular -er,Comprendo tu situación.,I understand your situation.
+79,lograr,to achieve / to manage to,simple,regular -ar,Logré terminarlo.,I managed to finish it.
+80,explicar,to explain,simple,regular -ar,Explícame el problema.,Explain the problem to me.
+81,preguntar,to ask (a question),simple,regular -ar,Pregunta al profesor.,Ask the teacher.
+82,tocar,to touch / to play (music),simple,regular -ar,Toco la guitarra.,I play the guitar.
+83,reconocer,to recognize / to admit,simple,irregular (c>zc),No te reconocí.,I did not recognize you.
+84,estudiar,to study,simple,regular -ar,Estudio medicina.,I study medicine.
+85,alcanzar,to reach / to be enough,simple,regular -ar,No alcanzo el estante.,I cannot reach the shelf.
+86,nacer,to be born,simple,irregular (c>zc),Nací en Chile.,I was born in Chile.
+87,dirigir,to direct / to manage,simple,regular -ir (g>j),Dirige una orquesta.,He directs an orchestra.
+88,correr,to run,simple,regular -er,Corro cada mañana.,I run every morning.
+89,utilizar,to use / to utilize,simple,regular -ar,Utilizo esta aplicación.,I use this app.
+90,pagar,to pay,simple,regular -ar,Pago con tarjeta.,I pay by card.
+91,ayudar,to help,simple,regular -ar,¿Me ayudas?,Will you help me?
+92,gustar,to like (to be pleasing),simple,regular -ar (indirect object),Me gusta el chocolate.,I like chocolate.
+93,jugar,to play (games/sports),simple,stem u>ue,Juego al fútbol.,I play football.
+94,escuchar,to listen to,simple,regular -ar,Escucho música clásica.,I listen to classical music.
+95,cumplir,to fulfill / to turn (an age),simple,regular -ir,Mañana cumplo treinta años.,Tomorrow I turn thirty.
+96,ofrecer,to offer,simple,irregular (c>zc),Me ofrecieron el puesto.,They offered me the position.
+97,descubrir,to discover,simple,regular -ir,Descubrimos un lugar precioso.,We discovered a beautiful place.
+98,comer,to eat,simple,regular -er,Comemos a la una.,We eat at one.
+99,beber,to drink,simple,regular -er,Bebo mucha agua.,I drink a lot of water.
+100,decidir,to decide,simple,regular -ir,Decidí quedarme.,I decided to stay.
+101,llamarse,to be called / to be named,reflexive,regular -ar,Me llamo Ana.,My name is Ana.
+102,irse,to leave / to go away,reflexive,irregular,Me voy ahora mismo.,I am leaving right now.
+103,sentirse,to feel (a certain way),reflexive,stem e>ie,Me siento mejor hoy.,I feel better today.
+104,encontrarse,to feel / to meet / to be located,reflexive,stem o>ue,Nos encontramos en el parque.,We met in the park.
+105,ponerse,to put on / to become,reflexive,irregular (-go),Se puso nervioso.,He became nervous.
+106,quedarse,to stay / to remain,reflexive,regular -ar,Me quedo en casa.,I am staying home.
+107,levantarse,to get up / to stand up,reflexive,regular -ar,Me levanto a las siete.,I get up at seven.
+108,acostarse,to go to bed / to lie down,reflexive,stem o>ue,Nos acostamos tarde.,We go to bed late.
+109,despertarse,to wake up,reflexive,stem e>ie,Me despierto temprano.,I wake up early.
+110,dormirse,to fall asleep,reflexive,stem o>ue,Me dormí en el sofá.,I fell asleep on the sofa.
+111,ducharse,to take a shower,reflexive,regular -ar,Me ducho por la noche.,I shower at night.
+112,bañarse,to bathe / to take a bath,reflexive,regular -ar,Los niños se bañan solos.,The children bathe by themselves.
+113,lavarse,to wash (oneself),reflexive,regular -ar,Lávate las manos.,Wash your hands.
+114,vestirse,to get dressed,reflexive,stem e>i,Me visto rápido.,I get dressed quickly.
+115,peinarse,to comb one's hair,reflexive,regular -ar,Se peina frente al espejo.,She combs her hair in front of the mirror.
+116,afeitarse,to shave,reflexive,regular -ar,Me afeito cada dos días.,I shave every two days.
+117,maquillarse,to put on makeup,reflexive,regular -ar,Se maquilla muy poco.,She wears very little makeup.
+118,secarse,to dry oneself,reflexive,regular -ar,Sécate con esta toalla.,Dry yourself with this towel.
+119,cepillarse,to brush (teeth/hair),reflexive,regular -ar,Me cepillo los dientes.,I brush my teeth.
+120,quitarse,to take off (clothing),reflexive,regular -ar,Quítate el abrigo.,Take off your coat.
+121,probarse,to try on,reflexive,stem o>ue,Me probé tres camisas.,I tried on three shirts.
+122,sentarse,to sit down,reflexive,stem e>ie,Siéntate aquí.,Sit here.
+123,moverse,to move (oneself),reflexive,stem o>ue,No te muevas.,Do not move.
+124,caerse,to fall down,reflexive,irregular (-igo),Se cayó por la escalera.,He fell down the stairs.
+125,acordarse,to remember,reflexive,stem o>ue,¿Te acuerdas de mí?,Do you remember me?
+126,olvidarse,to forget,reflexive,regular -ar,Me olvidé de la reunión.,I forgot about the meeting.
+127,darse cuenta,to realize,reflexive,irregular (dar),Me di cuenta del error.,I realized the mistake.
+128,hacerse,to become / to get,reflexive,irregular (-go),Se hizo médico.,He became a doctor.
+129,volverse,to become (sudden change),reflexive,stem o>ue,Se volvió loco.,He went crazy.
+130,convertirse,to turn into / to become,reflexive,stem e>ie,La oruga se convierte en mariposa.,The caterpillar turns into a butterfly.
+131,casarse,to get married,reflexive,regular -ar,Se casaron en junio.,They got married in June.
+132,divorciarse,to get divorced,reflexive,regular -ar,Se divorciaron el año pasado.,They got divorced last year.
+133,enamorarse,to fall in love,reflexive,regular -ar,Me enamoré de ella.,I fell in love with her.
+134,divertirse,to have fun / to enjoy oneself,reflexive,stem e>ie,Nos divertimos mucho.,We had a lot of fun.
+135,aburrirse,to get bored,reflexive,regular -ir,Me aburro en casa.,I get bored at home.
+136,cansarse,to get tired,reflexive,regular -ar,Me canso al subir.,I get tired going up.
+137,preocuparse,to worry,reflexive,regular -ar,No te preocupes.,Do not worry.
+138,enojarse,to get angry (Latin America),reflexive,regular -ar,Se enojó conmigo.,He got angry with me.
+139,enfadarse,to get angry (Spain),reflexive,regular -ar,No te enfades.,Do not get angry.
+140,alegrarse,to be glad / to cheer up,reflexive,regular -ar,Me alegro de verte.,I am glad to see you.
+141,asustarse,to get scared,reflexive,regular -ar,Me asusté con el ruido.,I got scared by the noise.
+142,sorprenderse,to be surprised,reflexive,regular -er,Se sorprendió al verme.,She was surprised to see me.
+143,relajarse,to relax,reflexive,regular -ar,Relájate un momento.,Relax for a moment.
+144,calmarse,to calm down,reflexive,regular -ar,Cálmate por favor.,Calm down please.
+145,quejarse,to complain,reflexive,regular -ar,Siempre se queja de todo.,He always complains about everything.
+146,reírse,to laugh,reflexive,stem e>i (accent),Nos reímos mucho.,We laughed a lot.
+147,callarse,to be quiet / to shut up,reflexive,regular -ar,Cállate un momento.,Be quiet for a moment.
+148,atreverse,to dare,reflexive,regular -er,No me atrevo a decirlo.,I do not dare to say it.
+149,arrepentirse,to regret,reflexive,stem e>ie,Me arrepiento de haberlo dicho.,I regret having said it.
+150,negarse,to refuse,reflexive,stem e>ie,Se negó a firmar.,He refused to sign.
+151,esforzarse,to make an effort,reflexive,stem o>ue,Me esfuerzo cada día.,I make an effort every day.
+152,dedicarse,to work as / to devote oneself,reflexive,regular -ar,¿A qué te dedicas?,What do you do for a living?
+153,ocuparse,to take care of / to deal with,reflexive,regular -ar,Yo me ocupo de eso.,I will take care of that.
+154,encargarse,to be in charge of,reflexive,regular -ar,Ella se encarga del pedido.,She is in charge of the order.
+155,fijarse,to notice / to pay attention,reflexive,regular -ar,Fíjate bien en esto.,Pay close attention to this.
+156,enterarse,to find out,reflexive,regular -ar,Me enteré ayer.,I found out yesterday.
+157,imaginarse,to imagine,reflexive,regular -ar,Imagínate la escena.,Imagine the scene.
+158,referirse,to refer to,reflexive,stem e>ie,¿A qué te refieres?,What are you referring to?
+159,tratarse,to be about,reflexive,regular -ar,Se trata de dinero.,It is about money.
+160,parecerse,to look alike / to resemble,reflexive,irregular (c>zc),Te pareces a tu padre.,You look like your father.
+161,perderse,to get lost / to miss out,reflexive,stem e>ie,Nos perdimos en la ciudad.,We got lost in the city.
+162,equivocarse,to make a mistake / to be wrong,reflexive,regular -ar,Me equivoqué de puerta.,I got the wrong door.
+163,acercarse,to approach / to get closer,reflexive,regular -ar,Acércate más.,Come closer.
+164,alejarse,to move away,reflexive,regular -ar,Aléjate del fuego.,Move away from the fire.
+165,acostumbrarse,to get used to,reflexive,regular -ar,Me acostumbré al clima.,I got used to the climate.
+166,prepararse,to get ready,reflexive,regular -ar,Me preparo para el examen.,I am getting ready for the exam.
+167,apurarse,to hurry up,reflexive,regular -ar,Apúrate que es tarde.,Hurry up it is late.
+168,despedirse,to say goodbye,reflexive,stem e>i,Se despidió de todos.,He said goodbye to everyone.
+169,mudarse,to move house,reflexive,regular -ar,Nos mudamos en marzo.,We are moving in March.
+170,meterse,to get into / to meddle,reflexive,regular -er,No te metas en eso.,Do not get involved in that.
+171,llevarse,to get along / to take away,reflexive,regular -ar,Me llevo bien con ellos.,I get along well with them.
+172,romperse,to break,reflexive,regular -er,Se me rompió el vaso.,My glass broke.
+173,lastimarse,to hurt oneself,reflexive,regular -ar,Se lastimó la rodilla.,He hurt his knee.
+174,enfermarse,to get sick,reflexive,regular -ar,Me enfermé la semana pasada.,I got sick last week.
+175,mejorarse,to get better / to recover,reflexive,regular -ar,Que te mejores pronto.,Get well soon.
+176,graduarse,to graduate,reflexive,regular -ar (accent ú),Me gradué en junio.,I graduated in June.
+177,jubilarse,to retire,reflexive,regular -ar,Mi padre se jubila este año.,My father retires this year.
+178,portarse,to behave,reflexive,regular -ar,Pórtate bien.,Behave yourself.
+179,burlarse,to make fun of,reflexive,regular -ar,No te burles de él.,Do not make fun of him.
+180,pelearse,to fight / to argue,reflexive,regular -ar,Se pelean por todo.,They fight about everything.
+181,actuar,to act,simple,regular -ar (accent ú),Actúo en una obra de teatro.,I act in a play.
+182,continuar,to continue,simple,regular -ar (accent ú),Continúo con el trabajo.,I continue with the work.
+183,efectuar,to carry out,simple,regular -ar (accent ú),Efectúan el pago mañana.,They carry out the payment tomorrow.
+184,evaluar,to evaluate / to assess,simple,regular -ar (accent ú),Evalúo los resultados.,I evaluate the results.
+185,graduar,to adjust / to graduate (someone),simple,regular -ar (accent ú),Gradúo la temperatura del horno.,I adjust the oven temperature.
+186,situar,to situate / to place,simple,regular -ar (accent ú),Sitúo el libro en el estante.,I place the book on the shelf.
+187,aullar,to howl,simple,regular -ar (accent ú),El lobo aúlla de noche.,The wolf howls at night.
+188,aunar,to combine / to join,simple,regular -ar (accent ú),Aúno esfuerzos con ellos.,I join forces with them.
+189,rehusar,to refuse,simple,regular -ar (accent ú),Rehúso la invitación.,I refuse the invitation.
+190,reunir,to gather / to bring together,simple,regular -ir (accent ú),Reúno a todo el equipo.,I bring the whole team together.
+191,ampliar,to expand / to enlarge,simple,regular -ar (accent í),Amplío la foto.,I enlarge the photo.
+192,confiar,to trust,simple,regular -ar (accent í),Confío en ti.,I trust you.
+193,criar,to raise / to bring up,simple,regular -ar (accent í),Crían caballos en el campo.,They raise horses in the countryside.
+194,enviar,to send,simple,regular -ar (accent í),Envío el paquete hoy.,I send the parcel today.
+195,guiar,to guide,simple,regular -ar (accent í),Guío a los turistas.,I guide the tourists.
+196,variar,to vary,simple,regular -ar (accent í),Los precios varían mucho.,Prices vary a lot.
+197,dormir,to sleep,simple,stem o>ue,Duermo ocho horas.,I sleep eight hours.
+198,construir,to build,simple,stem adds y,Construyen una casa nueva.,They are building a new house.
+199,incluir,to include,simple,stem adds y,El precio incluye el desayuno.,The price includes breakfast.
+200,concluir,to conclude,simple,stem adds y,Concluyo mi informe.,I am concluding my report.
+201,contribuir,to contribute,simple,stem adds y,Contribuyo con una idea.,I contribute an idea.
+202,destruir,to destroy,simple,stem adds y,La tormenta destruye el techo.,The storm destroys the roof.
+203,huir,to flee / to run away,simple,stem adds y,Huyen del peligro.,They flee from danger.
+204,reconstruir,to rebuild,simple,stem adds y,Reconstruyen el puente.,They are rebuilding the bridge.
+205,conducir,to drive,simple,irregular (c>zc),Conduzco con cuidado.,I drive carefully.
+206,crecer,to grow,simple,irregular (c>zc),Las plantas crecen rápido.,The plants grow fast.
+207,establecer,to establish,simple,irregular (c>zc),Establezco una regla clara.,I establish a clear rule.
+208,traducir,to translate,simple,irregular (c>zc),Traduzco textos técnicos.,I translate technical texts.
+209,convencer,to convince,simple,irregular (c>z),No te convenzo fácilmente.,I do not convince you easily.
+210,ejercer,to practise (a profession),simple,irregular (c>z),Ejerzo como abogado.,I practise as a lawyer.
+211,vencer,to defeat / to expire,simple,irregular (c>z),Venzo mis miedos.,I overcome my fears.
+212,coger,to take / to catch,simple,regular -er (g>j),Cojo el autobús cada día.,I take the bus every day.
+213,escoger,to choose,simple,regular -er (g>j),Escojo el menú del día.,I choose the menu of the day.
+214,proteger,to protect,simple,regular -er (g>j),Protejo mis datos.,I protect my data.
+215,recoger,to pick up / to collect,simple,regular -er (g>j),Recojo a los niños.,I pick up the children.
+216,exigir,to demand,simple,regular -ir (g>j),Exijo una explicación.,I demand an explanation.
+217,surgir,to arise / to emerge,simple,regular -ir (g>j),Surgen nuevos problemas.,New problems arise.
+218,corregir,to correct,simple,stem e>i (g>j),Corrijo los errores.,I correct the mistakes.
+219,elegir,to choose / to elect,simple,stem e>i (g>j),Elijo la opción más barata.,I choose the cheapest option.
+220,distraer,to distract,simple,irregular (-igo),El ruido me distrae.,The noise distracts me.
+221,valer,to be worth,simple,irregular (-go),Este cuadro vale mucho.,This painting is worth a lot.
+222,distinguir,to distinguish,simple,regular -ir (gu>g),No distingo los colores.,I cannot distinguish the colours.
+223,extinguir,to extinguish,simple,regular -ir (gu>g),Extinguen el fuego.,They extinguish the fire.
+224,perseguir,to chase / to pursue,simple,stem e>i (gu>g),La policía persigue al ladrón.,The police chase the thief.
+225,caber,to fit,simple,irregular (yo quepo),No quepo en este asiento.,I do not fit in this seat.
