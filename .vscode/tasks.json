@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build Spanish PDF",
+      "label": "Build Explainers",
       "type": "shell",
       "command": "powershell",
       "args": [
@@ -10,7 +10,24 @@
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}/build/make-pdf.ps1"
+        "${workspaceFolder}/explainers/general/Build-Explainers.ps1"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Split Presente (one-time migration)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/build/split-presente.ps1"
       ],
       "problemMatcher": [],
       "presentation": {

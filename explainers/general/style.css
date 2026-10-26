@@ -1,0 +1,392 @@
+﻿:root{
+  --navy:#17365d;
+  --navy-2:#2a5d8f;
+  --navy-pale:#eef3f9;
+  --red:#a62b37;
+  --red-pale:#fcecee;
+  --gold:#a8791c;
+  --gold-pale:#fdf5e3;
+  --teal:#0e6258;
+  --teal-pale:#e7f3f1;
+  --ink:#1d2229;
+  --muted:#5d6874;
+  --rule:#d6dde6;
+  --soft:#f6f8fb;
+}
+
+@page { size: A4; margin: 14mm 16mm 13mm 16mm; }
+@page cover { margin: 0; }
+
+*{ box-sizing:border-box; }
+
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+body{
+  margin:0;
+  font-family: Georgia, "Cambria", "Times New Roman", serif;
+  font-size:10pt;
+  line-height:1.44;
+  color:var(--ink);
+}
+
+p{ margin:0 0 .55em 0; text-align:justify; hyphens:auto; orphans:3; widows:3; }
+
+strong{ color:var(--navy); }
+
+em{ color:var(--ink); }
+
+/* ============ COVER ============ */
+.cover{
+  page:cover;
+  width:210mm;
+  height:297mm;
+  padding:0;
+  break-after:page;
+  position:relative;
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.cover .stripes{
+  position:absolute; top:0; left:0; right:0; height:14mm;
+  background:linear-gradient(to bottom,#a62b37 0 33.33%, #d6a12a 33.33% 66.66%, #a62b37 66.66% 100%);
+}
+.cover .stripes.bottom{ top:auto; bottom:0; }
+.cover .kicker{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:11pt; letter-spacing:.42em; text-transform:uppercase;
+  color:#d6a12a; margin-bottom:14mm; font-weight:600;
+}
+.cover h1{
+  font-family:Georgia, serif;
+  font-size:40pt; line-height:1.1; margin:0; font-weight:normal;
+  letter-spacing:.01em;
+}
+.cover .rule{
+  width:46mm; height:2px; background:#d6a12a; margin:9mm auto;
+}
+.cover .sub{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:12pt; color:#c9d6e5; max-width:148mm; line-height:1.75;
+}
+.cover .foot{
+  position:absolute; bottom:24mm; left:0; right:0;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:9.5pt; letter-spacing:.22em; text-transform:uppercase; color:#8ba3bf;
+}
+
+/* ============ PAGE SHELL ============ */
+.page{ padding:0; }
+
+/* a numbered chapter always opens a fresh page */
+h1.sec{ break-before:page; }
+
+/* ============ TOC ============ */
+.toc h2{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:19pt; color:var(--navy); margin:0 0 2mm 0;
+  padding:0; border:0; letter-spacing:.01em;
+}
+.toc .tagline{ color:var(--muted); font-style:italic; margin-bottom:6mm; }
+.toc ol{ list-style:none; margin:0; padding:0; counter-reset:toc; }
+.toc > ol > li{
+  margin:0 0 1mm 0;
+  padding:2mm 0 2mm 0;
+  border-bottom:1px solid var(--rule);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:11.5pt; color:var(--navy); font-weight:600;
+}
+.toc > ol > li .n{
+  display:inline-block; width:9mm; color:var(--red); font-weight:700;
+}
+.toc ol ol{ margin:1.5mm 0 0 9mm; }
+.toc ol ol li{
+  font-size:9.8pt; font-weight:400; color:var(--muted);
+  padding:.5mm 0; border:0;
+}
+
+/* ============ HEADINGS ============ */
+h1.sec{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:20pt; color:var(--navy); font-weight:600;
+  margin:0 0 5mm 0; padding:1mm 0 3mm 0;
+  border-bottom:2.5px solid var(--navy);
+  letter-spacing:.005em;
+  break-after:avoid;
+}
+h1.sec .num{
+  display:inline-block;
+  width:11mm; height:11mm; line-height:11mm;
+  background:var(--red); color:#fff;
+  font-size:13pt; font-weight:700; text-align:center;
+  border-radius:1.6mm; margin-right:4.5mm;
+  vertical-align:.8mm;
+}
+h1.sec .en{
+  display:block; font-size:10.5pt; color:var(--muted);
+  font-weight:400; margin:1.5mm 0 0 15.5mm; letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:13pt; color:var(--navy); font-weight:600;
+  margin:5.5mm 0 2.2mm 0; padding:0 0 0 3.5mm;
+  border-left:3.5px solid var(--red);
+  break-after:avoid;
+}
+h2:first-of-type{ margin-top:5.5mm; }
+
+h3{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:10.6pt; color:var(--teal); font-weight:600;
+  margin:4mm 0 1.8mm 0; letter-spacing:.01em;
+  break-after:avoid;
+}
+
+h4{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:9.6pt; color:var(--muted); font-weight:600;
+  margin:3.5mm 0 1.5mm 0; text-transform:uppercase; letter-spacing:.1em;
+  break-after:avoid;
+}
+
+/* ============ VERB HEADER BANNER ============ */
+.verbhead{
+  background:var(--navy-pale);
+  border-left:4px solid var(--navy);
+  padding:1.7mm 3.2mm;
+  margin:4mm 0 0 0;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  break-after:avoid;
+  break-inside:avoid;
+}
+.verbhead .v{
+  font-size:11.5pt; font-weight:700; color:var(--navy);
+  letter-spacing:.09em; text-transform:uppercase;
+}
+.verbhead .m{ font-size:9.4pt; color:var(--muted); margin-left:2.6mm; }
+.verbhead .tag{
+  float:right; font-size:7.4pt; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:#fff; background:var(--red);
+  padding:.6mm 2mm; border-radius:1mm; margin-top:1mm;
+}
+.verbhead .tag.teal{ background:var(--teal); }
+.verbhead .tag.gold{ background:var(--gold); }
+.verbhead .tag.navy{ background:var(--navy-2); }
+
+/* ============ TABLES ============ */
+table{
+  border-collapse:collapse;
+  width:100%;
+  margin:2mm 0 3.2mm 0;
+  font-size:9.2pt;
+  line-height:1.25;
+  break-inside:avoid;
+}
+caption{
+  caption-side:top; text-align:left;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8pt; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); padding-bottom:1mm; font-weight:600;
+}
+th{
+  background:var(--navy); color:#fff;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.2pt; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  text-align:left; padding:1.4mm 2.6mm;
+  border:1px solid var(--navy);
+}
+td{
+  padding:1.05mm 2.6mm;
+  border:1px solid var(--rule);
+  vertical-align:top;
+}
+tbody tr:nth-child(even) td{ background:var(--soft); }
+
+/* conjugation table */
+table.conj{ width:78%; }
+table.conj td.person{
+  width:46%; color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.6pt;
+}
+table.conj td.form{
+  font-size:10.2pt; letter-spacing:.015em;
+}
+table.conj tr.plain td.form{ color:var(--muted); }
+table.conj tr.plain td.person{ color:#8e98a4; }
+table.conj tr.plain td{ background:#fafbfd !important; }
+
+/* multi-verb conjugation table */
+table.multi td.person{
+  color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.6pt;
+}
+table.multi td{ font-size:10.2pt; }
+table.multi th .mv{
+  display:block; font-size:7pt; font-weight:400; letter-spacing:.02em;
+  text-transform:none; color:#b8ccE2; margin-top:.3mm; font-style:italic;
+}
+table.multi tr.plain td{ background:#fafbfd !important; }
+table.multi tr.plain td:not(.person){ color:var(--muted); }
+
+/* one-line horizontal conjugation strip */
+table.strip{ margin:2mm 0 3.2mm 0; }
+table.strip th{ text-align:center; font-size:7.6pt; letter-spacing:.04em; padding:1.1mm 1.5mm; }
+table.strip td{ text-align:center; font-size:10.2pt; padding:1.6mm 1.5mm; }
+table.strip td.irr{ background:var(--red-pale) !important; }
+
+/* endings table */
+table.endings th.ar{ background:var(--red); border-color:var(--red); }
+table.endings th.er{ background:var(--teal); border-color:var(--teal); }
+table.endings th.ir{ background:var(--gold); border-color:var(--gold); }
+table.endings td{ font-size:10.2pt; }
+table.endings td.person{
+  color:var(--muted); font-family:"Segoe UI","Trebuchet MS",sans-serif; font-size:8.6pt;
+}
+table.endings td.diff{ background:var(--gold-pale) !important; font-weight:700; color:var(--gold); }
+table.endings th .mv{
+  display:block; font-size:7pt; font-weight:400; text-transform:none;
+  font-style:italic; color:rgba(255,255,255,.72); margin-top:.3mm;
+}
+
+/* verb-list tables */
+table.verbs{ font-size:9pt; }
+table.verbs td:nth-child(1){ width:27%; font-style:italic; }
+table.verbs td:nth-child(2){ width:27%; font-weight:700; color:var(--red); }
+table.verbs td:nth-child(3){ color:var(--muted); }
+table.verbs.two td:nth-child(1){ width:50%; }
+table.verbs.two td:nth-child(2){ width:50%; font-weight:400; color:var(--ink); }
+
+/* two-up verb list: verb | yo | meaning | verb | yo | meaning */
+table.verbs2{ font-size:8.8pt; }
+table.verbs2 td{ padding:1.05mm 2.2mm; }
+table.verbs2 td:nth-child(1), table.verbs2 td:nth-child(4){ width:13.5%; font-style:italic; }
+table.verbs2 td:nth-child(2), table.verbs2 td:nth-child(5){ width:14%; font-weight:700; color:var(--red); }
+table.verbs2 td:nth-child(3), table.verbs2 td:nth-child(6){ width:22.5%; color:var(--muted); }
+table.verbs2 td:nth-child(3){ border-right:2px solid #c3ccd8; }
+table.verbs2 th:nth-child(3){ border-right:2px solid var(--navy); }
+
+table.pairs td{ width:50%; }
+table.pairs td:nth-child(1){ color:var(--muted); }
+table.pairs td:nth-child(2){ color:var(--ink); }
+
+table.rules td:nth-child(1){ width:26%; font-family:"Segoe UI",sans-serif; font-size:9pt; color:var(--navy); font-weight:600; }
+table.rules td:nth-child(2){ width:34%; color:var(--muted); }
+table.rules td:nth-child(3){ font-style:italic; }
+
+table.summary td:nth-child(1){ width:34%; font-family:"Segoe UI",sans-serif; font-size:9pt; font-weight:600; color:var(--navy); }
+table.summary td:nth-child(2){ width:30%; }
+table.summary td:nth-child(3){ color:var(--red); font-weight:600; }
+
+table.persons td:nth-child(1){ width:24%; color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; }
+table.persons td:nth-child(2){ width:28%; font-weight:700; color:var(--navy); font-size:10pt; }
+table.persons td:nth-child(3){ color:var(--muted); font-size:8.8pt; }
+
+table.uses td:nth-child(1){ width:27%; font-family:"Segoe UI",sans-serif; font-size:8.8pt; font-weight:600; color:var(--navy); }
+table.uses td:nth-child(2){ width:36%; font-style:italic; font-weight:600; color:#5c4410; background:var(--gold-pale) !important; }
+table.uses td:nth-child(3){ color:var(--muted); font-size:8.8pt; font-family:"Segoe UI",sans-serif; }
+table.uses .sub{ font-weight:400; color:var(--muted); font-size:7.8pt; }
+
+table.pron{ width:52%; }
+table.pron td:nth-child(1){ width:50%; color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; }
+table.pron td:nth-child(2){ font-weight:700; color:var(--red); font-size:10.5pt; }
+
+/* ============ INLINE HIGHLIGHTS ============ */
+.ch{ color:var(--red); font-weight:700; }
+.end{ color:var(--gold); font-weight:700; }
+.acc{ color:var(--red); font-weight:700; }
+.sp{ color:var(--teal); font-weight:700; }
+.es-word{ font-style:italic; }
+
+/* ============ EXAMPLE CALLOUT ============ */
+.ex{
+  background:var(--gold-pale);
+  border-left:3.5px solid var(--gold);
+  padding:1.7mm 3.2mm;
+  margin:2mm 0 2.8mm 0;
+  text-align:left;
+  line-height:1.3;
+  break-inside:avoid;
+}
+.ex .es{
+  display:block; font-style:italic; font-size:10.2pt; color:#5c4410; font-weight:600;
+}
+.ex .en{
+  display:block; font-size:8.8pt; color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif; margin-top:.4mm;
+}
+.ex .es + .es{ margin-top:1.4mm; }
+
+/* ============ NOTE BOXES ============ */
+.box{
+  padding:2.2mm 3.2mm 1.8mm 3.2mm;
+  margin:2.8mm 0 3.4mm 0;
+  border:1px solid var(--rule);
+  border-left:4px solid var(--teal);
+  background:var(--teal-pale);
+  break-inside:avoid;
+}
+.box .t{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:1.1mm;
+}
+.box p:last-child{ margin-bottom:0; }
+.box ul{ margin:0; padding-left:4.5mm; }
+.box li{ margin-bottom:.4mm; }
+
+.box.warn{ border-left-color:var(--red); background:var(--red-pale); border-color:#f0d3d7; }
+.box.warn .t{ color:var(--red); }
+.box.tip{ border-left-color:var(--gold); background:var(--gold-pale); border-color:#eddfc0; }
+.box.tip .t{ color:var(--gold); }
+.box.key{ border-left-color:var(--navy); background:var(--navy-pale); border-color:#d4e0ee; }
+.box.key .t{ color:var(--navy); }
+
+/* ============ LISTS ============ */
+ul.clean{ margin:1.5mm 0 2.6mm 0; padding-left:5mm; }
+ul.clean li{ margin-bottom:.9mm; }
+ul.clean li::marker{ color:var(--red); }
+
+ol.clean{ margin:1.5mm 0 2.6mm 0; padding-left:5.5mm; }
+ol.clean li{ margin-bottom:.9mm; }
+ol.clean li::marker{ color:var(--red); font-weight:700; }
+
+/* ============ BOOT FIGURE ============ */
+.boot{
+  display:flex; gap:5mm; align-items:center;
+  margin:2.5mm 0 3.4mm 0; break-inside:avoid;
+}
+.boot .bt{
+  width:68mm; border:1px solid var(--rule); border-collapse:collapse;
+  font-size:9pt; margin:0;
+}
+.boot .bt td{ padding:1.05mm 2.6mm; }
+.boot .bt td.p{
+  color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.4pt; width:48%;
+}
+.boot .bt tr.on td{ background:var(--red-pale) !important; }
+.boot .bt tr.on td.v{ color:var(--red); font-weight:700; font-family:"Segoe UI",sans-serif; font-size:8.6pt; letter-spacing:.06em; }
+.boot .bt tr.off td{ background:#f4f6f9 !important; }
+.boot .bt tr.off td.v{ color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; letter-spacing:.06em; }
+.boot .cap{ flex:1; font-size:9pt; color:var(--muted); }
+
+/* ============ MISC ============ */
+.oy{
+  text-align:center; margin:2.5mm 0 1.2mm 0;
+  font-size:16pt; color:var(--navy); letter-spacing:.06em;
+  break-inside:avoid;
+}
+.oy .hi{ color:var(--red); font-weight:700; }
+.oy-cap{
+  text-align:center; font-family:"Segoe UI",sans-serif; font-size:8.2pt;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+}
+
+hr.soft{ border:0; border-top:1px solid var(--rule); margin:5mm 0; }

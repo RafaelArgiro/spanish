@@ -1,0 +1,830 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>El Futuro Proximo</title>
+<style>
+:root{
+  --navy:#17365d;
+  --navy-2:#2a5d8f;
+  --navy-pale:#eef3f9;
+  --red:#a62b37;
+  --red-pale:#fcecee;
+  --gold:#a8791c;
+  --gold-pale:#fdf5e3;
+  --teal:#0e6258;
+  --teal-pale:#e7f3f1;
+  --ink:#1d2229;
+  --muted:#5d6874;
+  --rule:#d6dde6;
+  --soft:#f6f8fb;
+}
+
+@page { size: A4; margin: 14mm 16mm 13mm 16mm; }
+@page cover { margin: 0; }
+
+*{ box-sizing:border-box; }
+
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+body{
+  margin:0;
+  font-family: Georgia, "Cambria", "Times New Roman", serif;
+  font-size:10pt;
+  line-height:1.44;
+  color:var(--ink);
+}
+
+p{ margin:0 0 .55em 0; text-align:justify; hyphens:auto; orphans:3; widows:3; }
+
+strong{ color:var(--navy); }
+
+em{ color:var(--ink); }
+
+/* ============ COVER ============ */
+.cover{
+  page:cover;
+  width:210mm;
+  height:297mm;
+  padding:0;
+  break-after:page;
+  position:relative;
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.cover .stripes{
+  position:absolute; top:0; left:0; right:0; height:14mm;
+  background:linear-gradient(to bottom,#a62b37 0 33.33%, #d6a12a 33.33% 66.66%, #a62b37 66.66% 100%);
+}
+.cover .stripes.bottom{ top:auto; bottom:0; }
+.cover .kicker{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:11pt; letter-spacing:.42em; text-transform:uppercase;
+  color:#d6a12a; margin-bottom:14mm; font-weight:600;
+}
+.cover h1{
+  font-family:Georgia, serif;
+  font-size:40pt; line-height:1.1; margin:0; font-weight:normal;
+  letter-spacing:.01em;
+}
+.cover .rule{
+  width:46mm; height:2px; background:#d6a12a; margin:9mm auto;
+}
+.cover .sub{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:12pt; color:#c9d6e5; max-width:148mm; line-height:1.75;
+}
+.cover .foot{
+  position:absolute; bottom:24mm; left:0; right:0;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:9.5pt; letter-spacing:.22em; text-transform:uppercase; color:#8ba3bf;
+}
+
+/* ============ PAGE SHELL ============ */
+.page{ padding:0; }
+
+/* a numbered chapter always opens a fresh page */
+h1.sec{ break-before:page; }
+
+/* ============ TOC ============ */
+.toc h2{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:19pt; color:var(--navy); margin:0 0 2mm 0;
+  padding:0; border:0; letter-spacing:.01em;
+}
+.toc .tagline{ color:var(--muted); font-style:italic; margin-bottom:6mm; }
+.toc ol{ list-style:none; margin:0; padding:0; counter-reset:toc; }
+.toc > ol > li{
+  margin:0 0 1mm 0;
+  padding:2mm 0 2mm 0;
+  border-bottom:1px solid var(--rule);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:11.5pt; color:var(--navy); font-weight:600;
+}
+.toc > ol > li .n{
+  display:inline-block; width:9mm; color:var(--red); font-weight:700;
+}
+.toc ol ol{ margin:1.5mm 0 0 9mm; }
+.toc ol ol li{
+  font-size:9.8pt; font-weight:400; color:var(--muted);
+  padding:.5mm 0; border:0;
+}
+
+/* ============ HEADINGS ============ */
+h1.sec{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:20pt; color:var(--navy); font-weight:600;
+  margin:0 0 5mm 0; padding:1mm 0 3mm 0;
+  border-bottom:2.5px solid var(--navy);
+  letter-spacing:.005em;
+  break-after:avoid;
+}
+h1.sec .num{
+  display:inline-block;
+  width:11mm; height:11mm; line-height:11mm;
+  background:var(--red); color:#fff;
+  font-size:13pt; font-weight:700; text-align:center;
+  border-radius:1.6mm; margin-right:4.5mm;
+  vertical-align:.8mm;
+}
+h1.sec .en{
+  display:block; font-size:10.5pt; color:var(--muted);
+  font-weight:400; margin:1.5mm 0 0 15.5mm; letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:13pt; color:var(--navy); font-weight:600;
+  margin:5.5mm 0 2.2mm 0; padding:0 0 0 3.5mm;
+  border-left:3.5px solid var(--red);
+  break-after:avoid;
+}
+h2:first-of-type{ margin-top:5.5mm; }
+
+h3{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:10.6pt; color:var(--teal); font-weight:600;
+  margin:4mm 0 1.8mm 0; letter-spacing:.01em;
+  break-after:avoid;
+}
+
+h4{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:9.6pt; color:var(--muted); font-weight:600;
+  margin:3.5mm 0 1.5mm 0; text-transform:uppercase; letter-spacing:.1em;
+  break-after:avoid;
+}
+
+/* ============ VERB HEADER BANNER ============ */
+.verbhead{
+  background:var(--navy-pale);
+  border-left:4px solid var(--navy);
+  padding:1.7mm 3.2mm;
+  margin:4mm 0 0 0;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  break-after:avoid;
+  break-inside:avoid;
+}
+.verbhead .v{
+  font-size:11.5pt; font-weight:700; color:var(--navy);
+  letter-spacing:.09em; text-transform:uppercase;
+}
+.verbhead .m{ font-size:9.4pt; color:var(--muted); margin-left:2.6mm; }
+.verbhead .tag{
+  float:right; font-size:7.4pt; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:#fff; background:var(--red);
+  padding:.6mm 2mm; border-radius:1mm; margin-top:1mm;
+}
+.verbhead .tag.teal{ background:var(--teal); }
+.verbhead .tag.gold{ background:var(--gold); }
+.verbhead .tag.navy{ background:var(--navy-2); }
+
+/* ============ TABLES ============ */
+table{
+  border-collapse:collapse;
+  width:100%;
+  margin:2mm 0 3.2mm 0;
+  font-size:9.2pt;
+  line-height:1.25;
+  break-inside:avoid;
+}
+caption{
+  caption-side:top; text-align:left;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8pt; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); padding-bottom:1mm; font-weight:600;
+}
+th{
+  background:var(--navy); color:#fff;
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.2pt; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  text-align:left; padding:1.4mm 2.6mm;
+  border:1px solid var(--navy);
+}
+td{
+  padding:1.05mm 2.6mm;
+  border:1px solid var(--rule);
+  vertical-align:top;
+}
+tbody tr:nth-child(even) td{ background:var(--soft); }
+
+/* conjugation table */
+table.conj{ width:78%; }
+table.conj td.person{
+  width:46%; color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.6pt;
+}
+table.conj td.form{
+  font-size:10.2pt; letter-spacing:.015em;
+}
+table.conj tr.plain td.form{ color:var(--muted); }
+table.conj tr.plain td.person{ color:#8e98a4; }
+table.conj tr.plain td{ background:#fafbfd !important; }
+
+/* multi-verb conjugation table */
+table.multi td.person{
+  color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8.6pt;
+}
+table.multi td{ font-size:10.2pt; }
+table.multi th .mv{
+  display:block; font-size:7pt; font-weight:400; letter-spacing:.02em;
+  text-transform:none; color:#b8ccE2; margin-top:.3mm; font-style:italic;
+}
+table.multi tr.plain td{ background:#fafbfd !important; }
+table.multi tr.plain td:not(.person){ color:var(--muted); }
+
+/* one-line horizontal conjugation strip */
+table.strip{ margin:2mm 0 3.2mm 0; }
+table.strip th{ text-align:center; font-size:7.6pt; letter-spacing:.04em; padding:1.1mm 1.5mm; }
+table.strip td{ text-align:center; font-size:10.2pt; padding:1.6mm 1.5mm; }
+table.strip td.irr{ background:var(--red-pale) !important; }
+
+/* endings table */
+table.endings th.ar{ background:var(--red); border-color:var(--red); }
+table.endings th.er{ background:var(--teal); border-color:var(--teal); }
+table.endings th.ir{ background:var(--gold); border-color:var(--gold); }
+table.endings td{ font-size:10.2pt; }
+table.endings td.person{
+  color:var(--muted); font-family:"Segoe UI","Trebuchet MS",sans-serif; font-size:8.6pt;
+}
+table.endings td.diff{ background:var(--gold-pale) !important; font-weight:700; color:var(--gold); }
+table.endings th .mv{
+  display:block; font-size:7pt; font-weight:400; text-transform:none;
+  font-style:italic; color:rgba(255,255,255,.72); margin-top:.3mm;
+}
+
+/* verb-list tables */
+table.verbs{ font-size:9pt; }
+table.verbs td:nth-child(1){ width:27%; font-style:italic; }
+table.verbs td:nth-child(2){ width:27%; font-weight:700; color:var(--red); }
+table.verbs td:nth-child(3){ color:var(--muted); }
+table.verbs.two td:nth-child(1){ width:50%; }
+table.verbs.two td:nth-child(2){ width:50%; font-weight:400; color:var(--ink); }
+
+/* two-up verb list: verb | yo | meaning | verb | yo | meaning */
+table.verbs2{ font-size:8.8pt; }
+table.verbs2 td{ padding:1.05mm 2.2mm; }
+table.verbs2 td:nth-child(1), table.verbs2 td:nth-child(4){ width:13.5%; font-style:italic; }
+table.verbs2 td:nth-child(2), table.verbs2 td:nth-child(5){ width:14%; font-weight:700; color:var(--red); }
+table.verbs2 td:nth-child(3), table.verbs2 td:nth-child(6){ width:22.5%; color:var(--muted); }
+table.verbs2 td:nth-child(3){ border-right:2px solid #c3ccd8; }
+table.verbs2 th:nth-child(3){ border-right:2px solid var(--navy); }
+
+table.pairs td{ width:50%; }
+table.pairs td:nth-child(1){ color:var(--muted); }
+table.pairs td:nth-child(2){ color:var(--ink); }
+
+table.rules td:nth-child(1){ width:26%; font-family:"Segoe UI",sans-serif; font-size:9pt; color:var(--navy); font-weight:600; }
+table.rules td:nth-child(2){ width:34%; color:var(--muted); }
+table.rules td:nth-child(3){ font-style:italic; }
+
+table.summary td:nth-child(1){ width:34%; font-family:"Segoe UI",sans-serif; font-size:9pt; font-weight:600; color:var(--navy); }
+table.summary td:nth-child(2){ width:30%; }
+table.summary td:nth-child(3){ color:var(--red); font-weight:600; }
+
+table.persons td:nth-child(1){ width:24%; color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; }
+table.persons td:nth-child(2){ width:28%; font-weight:700; color:var(--navy); font-size:10pt; }
+table.persons td:nth-child(3){ color:var(--muted); font-size:8.8pt; }
+
+table.uses td:nth-child(1){ width:27%; font-family:"Segoe UI",sans-serif; font-size:8.8pt; font-weight:600; color:var(--navy); }
+table.uses td:nth-child(2){ width:36%; font-style:italic; font-weight:600; color:#5c4410; background:var(--gold-pale) !important; }
+table.uses td:nth-child(3){ color:var(--muted); font-size:8.8pt; font-family:"Segoe UI",sans-serif; }
+table.uses .sub{ font-weight:400; color:var(--muted); font-size:7.8pt; }
+
+table.pron{ width:52%; }
+table.pron td:nth-child(1){ width:50%; color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; }
+table.pron td:nth-child(2){ font-weight:700; color:var(--red); font-size:10.5pt; }
+
+/* ============ INLINE HIGHLIGHTS ============ */
+.ch{ color:var(--red); font-weight:700; }
+.end{ color:var(--gold); font-weight:700; }
+.acc{ color:var(--red); font-weight:700; }
+.sp{ color:var(--teal); font-weight:700; }
+.es-word{ font-style:italic; }
+
+/* ============ EXAMPLE CALLOUT ============ */
+.ex{
+  background:var(--gold-pale);
+  border-left:3.5px solid var(--gold);
+  padding:1.7mm 3.2mm;
+  margin:2mm 0 2.8mm 0;
+  text-align:left;
+  line-height:1.3;
+  break-inside:avoid;
+}
+.ex .es{
+  display:block; font-style:italic; font-size:10.2pt; color:#5c4410; font-weight:600;
+}
+.ex .en{
+  display:block; font-size:8.8pt; color:var(--muted);
+  font-family:"Segoe UI","Trebuchet MS",sans-serif; margin-top:.4mm;
+}
+.ex .es + .es{ margin-top:1.4mm; }
+
+/* ============ NOTE BOXES ============ */
+.box{
+  padding:2.2mm 3.2mm 1.8mm 3.2mm;
+  margin:2.8mm 0 3.4mm 0;
+  border:1px solid var(--rule);
+  border-left:4px solid var(--teal);
+  background:var(--teal-pale);
+  break-inside:avoid;
+}
+.box .t{
+  font-family:"Segoe UI","Trebuchet MS",sans-serif;
+  font-size:8pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:1.1mm;
+}
+.box p:last-child{ margin-bottom:0; }
+.box ul{ margin:0; padding-left:4.5mm; }
+.box li{ margin-bottom:.4mm; }
+
+.box.warn{ border-left-color:var(--red); background:var(--red-pale); border-color:#f0d3d7; }
+.box.warn .t{ color:var(--red); }
+.box.tip{ border-left-color:var(--gold); background:var(--gold-pale); border-color:#eddfc0; }
+.box.tip .t{ color:var(--gold); }
+.box.key{ border-left-color:var(--navy); background:var(--navy-pale); border-color:#d4e0ee; }
+.box.key .t{ color:var(--navy); }
+
+/* ============ LISTS ============ */
+ul.clean{ margin:1.5mm 0 2.6mm 0; padding-left:5mm; }
+ul.clean li{ margin-bottom:.9mm; }
+ul.clean li::marker{ color:var(--red); }
+
+ol.clean{ margin:1.5mm 0 2.6mm 0; padding-left:5.5mm; }
+ol.clean li{ margin-bottom:.9mm; }
+ol.clean li::marker{ color:var(--red); font-weight:700; }
+
+/* ============ BOOT FIGURE ============ */
+.boot{
+  display:flex; gap:5mm; align-items:center;
+  margin:2.5mm 0 3.4mm 0; break-inside:avoid;
+}
+.boot .bt{
+  width:68mm; border:1px solid var(--rule); border-collapse:collapse;
+  font-size:9pt; margin:0;
+}
+.boot .bt td{ padding:1.05mm 2.6mm; }
+.boot .bt td.p{
+  color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.4pt; width:48%;
+}
+.boot .bt tr.on td{ background:var(--red-pale) !important; }
+.boot .bt tr.on td.v{ color:var(--red); font-weight:700; font-family:"Segoe UI",sans-serif; font-size:8.6pt; letter-spacing:.06em; }
+.boot .bt tr.off td{ background:#f4f6f9 !important; }
+.boot .bt tr.off td.v{ color:var(--muted); font-family:"Segoe UI",sans-serif; font-size:8.6pt; letter-spacing:.06em; }
+.boot .cap{ flex:1; font-size:9pt; color:var(--muted); }
+
+/* ============ MISC ============ */
+.oy{
+  text-align:center; margin:2.5mm 0 1.2mm 0;
+  font-size:16pt; color:var(--navy); letter-spacing:.06em;
+  break-inside:avoid;
+}
+.oy .hi{ color:var(--red); font-weight:700; }
+.oy-cap{
+  text-align:center; font-family:"Segoe UI",sans-serif; font-size:8.2pt;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+}
+
+hr.soft{ border:0; border-top:1px solid var(--rule); margin:5mm 0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<section class="cover">
+  <div class="stripes"></div>
+  <div class="kicker">Spanish Grammar</div>
+  <h1>El Futuro<br>Pr&oacute;ximo</h1>
+  <div class="rule"></div>
+  <div class="sub">Ir + a + infinitivo &mdash; how Spanish talks about plans,<br>intentions and what is about to happen.</div>
+  <div class="foot">A Working Reference</div>
+  <div class="stripes bottom"></div>
+</section>
+
+
+<!-- ===================== TOC ===================== -->
+<section class="page toc">
+  <h2>Contents</h2>
+  <p class="tagline">The easiest future tense in Spanish. Only one verb is conjugated, and it is a verb you already know &mdash; everything else stays in the infinitive.</p>
+  <ol>
+    <li><span class="n">0</span>What the Futuro Pr&oacute;ximo Is Used For
+      <ol><li>The five uses &middot; Time expressions</li></ol>
+    </li>
+    <li><span class="n">1</span>The Formula
+      <ol>
+        <li>Step 1&nbsp; Conjugate <span class="es-word">ir</span> &nbsp;&middot;&nbsp; Step 2&nbsp; Add <span class="es-word">a</span> &nbsp;&middot;&nbsp; Step 3&nbsp; Add the infinitive</li>
+        <li>The full form &middot; Why the infinitive makes this easy</li>
+      </ol>
+    </li>
+    <li><span class="n">2</span>Negation, Questions and Pronouns
+      <ol><li>Where <span class="es-word">no</span> goes &middot; Two positions for pronouns &middot; Reflexive verbs &middot; Accents</li></ol>
+    </li>
+    <li><span class="n">3</span>Futuro Pr&oacute;ximo vs. Futuro Simple
+      <ol><li>Form &middot; Feel &middot; Which one to use &middot; What only the simple future can do</li></ol>
+    </li>
+    <li><span class="n">4</span>Iba a + Infinitivo
+      <ol><li>The past version &mdash; what was going to happen but did not</li></ol>
+    </li>
+    <li><span class="n">5</span>Common Mistakes
+      <ol><li>The five things that actually go wrong</li></ol>
+    </li>
+    <li><span class="n">6</span>Summary
+      <ol><li>One-page overview</li></ol>
+    </li>
+  </ol>
+
+  <div class="box key" style="margin-top:12mm;">
+    <div class="t">How to read the tables</div>
+    <ul>
+      <li><span class="ch">Red</span> marks the part that <strong>changes</strong> &mdash; almost always the verb <em>ir</em>.</li>
+      <li><span class="end">Gold</span> marks the obligatory <strong>a</strong>.</li>
+      <li><span class="sp">Teal</span> marks the <strong>infinitive</strong>, which never changes.</li>
+      <li>Greyed-out rows are forms where nothing happens.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== SECTION 0 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">0</span>What the Futuro Pr&oacute;ximo Is Used For<span class="en">El futuro pr&oacute;ximo &mdash; usos</span></h1>
+
+  <p>The <em>futuro pr&oacute;ximo</em> is the Spanish equivalent of English &ldquo;going to&rdquo;. It is the ordinary, everyday way of talking about the future in speech, and in most of Latin America it has largely displaced the one-word future tense in conversation.</p>
+
+  <p>It is built from three pieces and only the first of them changes. That makes it the fastest route to talking about the future: if you can conjugate <em>ir</em>, you can put any verb in the language into the future without learning a single new ending.</p>
+
+  <h2>The five main uses</h2>
+
+  <table class="uses">
+    <thead><tr><th>Use</th><th>Example</th><th>English</th></tr></thead>
+    <tbody>
+      <tr><td>Plans and intentions</td><td>Voy a estudiar esta noche.</td><td>I am going to study tonight.</td></tr>
+      <tr><td>The near future<br><span class="sub">something close in time</span></td><td>Vamos a llegar en cinco minutos.</td><td>We are going to arrive in five minutes.</td></tr>
+      <tr><td>Predictions from evidence<br><span class="sub">something you can see right now</span></td><td>Mira las nubes. Va a llover.</td><td>Look at the clouds. It is going to rain.</td></tr>
+      <tr><td>Something about to happen<br><span class="sub">imminent</span></td><td>&iexcl;Cuidado! Te vas a caer.</td><td>Careful! You are going to fall.</td></tr>
+      <tr><td>Suggestions<br><span class="sub">vamos a &hellip; = let's &hellip;</span></td><td>Vamos a comer algo.</td><td>Let's eat something.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box">
+    <div class="t">Vamos a &mdash; two readings</div>
+    <p><em>Vamos a comer</em> can mean &ldquo;we are going to eat&rdquo; or &ldquo;let's eat&rdquo;. Tone and context separate them, and in practice the ambiguity almost never causes trouble.</p>
+  </div>
+
+  <h2>Time expressions that go with it</h2>
+  <p>These are the words that most often accompany the futuro pr&oacute;ximo. They are worth learning as a block, because they are what signals the future in a sentence where the verb itself is unchanged.</p>
+
+  <table class="verbs2">
+    <thead><tr><th>Spanish</th><th>English</th><th>&nbsp;</th><th>Spanish</th><th>English</th><th>&nbsp;</th></tr></thead>
+    <tbody>
+      <tr><td>hoy</td><td>today</td><td></td><td>la semana que viene</td><td>next week</td><td></td></tr>
+      <tr><td>esta tarde</td><td>this afternoon</td><td></td><td>el mes que viene</td><td>next month</td><td></td></tr>
+      <tr><td>esta noche</td><td>tonight</td><td></td><td>el a&ntilde;o que viene</td><td>next year</td><td></td></tr>
+      <tr><td>ma&ntilde;ana</td><td>tomorrow</td><td></td><td>dentro de una hora</td><td>in an hour</td><td></td></tr>
+      <tr><td>pasado ma&ntilde;ana</td><td>the day after tomorrow</td><td></td><td>en un rato</td><td>in a while</td><td></td></tr>
+      <tr><td>luego</td><td>later</td><td></td><td>m&aacute;s tarde</td><td>later on</td><td></td></tr>
+      <tr><td>pronto</td><td>soon</td><td></td><td>enseguida</td><td>right away</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p class="ex">
+    <span class="es">La semana que viene vamos a mudarnos.</span><span class="en">Next week we are going to move house.</span>
+    <span class="es">Dentro de una hora voy a salir.</span><span class="en">In an hour I am going to leave.</span>
+  </p>
+</section>
+
+<!-- ===================== SECTION 1 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">1</span>The Formula<span class="en">Ir + a + infinitivo</span></h1>
+
+  <div class="oy"><span class="hi">ir</span> &nbsp;+&nbsp; <span class="hi">a</span> &nbsp;+&nbsp; infinitivo</div>
+  <div class="oy-cap">only the first word changes</div>
+
+  <p>Three pieces, in a fixed order. The verb <em>ir</em> is conjugated in the present tense to match the subject. The <strong>a</strong> is a fixed preposition that never changes. The main verb is left in the infinitive &mdash; exactly as it appears in the dictionary.</p>
+
+  <h2>Step 1 &mdash; conjugate <em>ir</em> in the present</h2>
+  <p>This is the only irregular part of the whole construction, and it is one of the twelve verbs you already memorised for the present tense.</p>
+
+  <table class="strip">
+    <thead><tr><th>yo</th><th>t&uacute;</th><th>&eacute;l / ella / usted</th><th>nosotros</th><th>vosotros</th><th>ellos / ellas / ustedes</th></tr></thead>
+    <tbody><tr>
+      <td class="irr"><span class="ch">voy</span></td><td class="irr"><span class="ch">vas</span></td><td class="irr"><span class="ch">va</span></td>
+      <td class="irr"><span class="ch">vamos</span></td><td class="irr"><span class="ch">vais</span></td><td class="irr"><span class="ch">van</span></td>
+    </tr></tbody>
+  </table>
+
+  <p>The present forms of <em>ir</em> come from a different Latin verb than the infinitive, which is why they share no letters with <em>ir</em>. There is nothing to work out; they have to be known by heart.</p>
+
+  <h2>Step 2 &mdash; add <em>a</em></h2>
+  <p>The <strong>a</strong> sits between the conjugated <em>ir</em> and the infinitive. It carries no meaning of its own and it never changes form.</p>
+
+  <div class="box warn">
+    <div class="t">The single most common mistake</div>
+    <p>Leaving out the <strong>a</strong>. English says &ldquo;I am going to speak&rdquo; with no visible preposition joining the two verbs, and learners copy that structure directly.</p>
+    <p><em>Voy hablar con &eacute;l</em> is wrong. It must be <em>Voy <strong>a</strong> hablar con &eacute;l</em>.</p>
+  </div>
+
+  <h2>Step 3 &mdash; add the infinitive</h2>
+  <p>The main verb stays in its dictionary form: ending in <strong>-ar</strong>, <strong>-er</strong> or <strong>-ir</strong>. It is not conjugated, it does not agree with anything, and it is identical for every person.</p>
+
+  <h2>The full form</h2>
+
+  <table class="multi">
+    <thead><tr>
+      <th>Person</th>
+      <th>-AR<span class="mv">hablar &middot; to speak</span></th>
+      <th>-ER<span class="mv">comer &middot; to eat</span></th>
+      <th>-IR<span class="mv">abrir &middot; to open</span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="person">yo</td><td><span class="ch">voy</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">voy</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">voy</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+      <tr><td class="person">t&uacute;</td><td><span class="ch">vas</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">vas</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">vas</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+      <tr><td class="person">&eacute;l / ella / usted</td><td><span class="ch">va</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">va</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">va</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+      <tr><td class="person">nosotros</td><td><span class="ch">vamos</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">vamos</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">vamos</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+      <tr><td class="person">vosotros</td><td><span class="ch">vais</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">vais</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">vais</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+      <tr><td class="person">ellos / ellas / ustedes</td><td><span class="ch">van</span> <span class="end">a</span> <span class="sp">hablar</span></td><td><span class="ch">van</span> <span class="end">a</span> <span class="sp">comer</span></td><td><span class="ch">van</span> <span class="end">a</span> <span class="sp">abrir</span></td></tr>
+    </tbody>
+  </table>
+
+  <p>Read down any column: the infinitive in teal is identical in all six rows. Read across any row: the form of <em>ir</em> in red is identical for all three verb groups. The <strong>-ar</strong> / <strong>-er</strong> / <strong>-ir</strong> distinction, which mattered so much in the present tense, does no work at all here.</p>
+
+  <p class="ex">
+    <span class="es">Voy a hablar con el director ma&ntilde;ana.</span><span class="en">I am going to speak to the director tomorrow.</span>
+    <span class="es">&iquest;Vais a comer con nosotros?</span><span class="en">Are you going to eat with us?</span>
+    <span class="es">Van a abrir una tienda nueva.</span><span class="en">They are going to open a new shop.</span>
+  </p>
+</section>
+
+<section class="page">
+  <h2>Why the infinitive makes this easy</h2>
+
+  <p>Every difficulty from the present tense disappears. Stem changes, irregular <em>yo</em> forms and spelling changes all live in the conjugated verb &mdash; and the conjugated verb here is always <em>ir</em>. The main verb is never touched.</p>
+
+  <table class="verbs">
+    <caption>The hard verbs from the present tense, in the futuro pr&oacute;ximo</caption>
+    <thead><tr><th>Infinitive</th><th>Present (yo)</th><th>Futuro pr&oacute;ximo (yo)</th></tr></thead>
+    <tbody>
+      <tr><td>poder</td><td>p<span class="ch">ue</span>do</td><td>voy a <span class="sp">poder</span></td></tr>
+      <tr><td>tener</td><td>ten<span class="ch">g</span>o</td><td>voy a <span class="sp">tener</span></td></tr>
+      <tr><td>decir</td><td>d<span class="ch">ig</span>o</td><td>voy a <span class="sp">decir</span></td></tr>
+      <tr><td>conocer</td><td>cono<span class="ch">zc</span>o</td><td>voy a <span class="sp">conocer</span></td></tr>
+      <tr><td>construir</td><td>constru<span class="ch">y</span>o</td><td>voy a <span class="sp">construir</span></td></tr>
+      <tr><td>pedir</td><td>p<span class="ch">i</span>do</td><td>voy a <span class="sp">pedir</span></td></tr>
+      <tr><td>saber</td><td><span class="ch">s&eacute;</span></td><td>voy a <span class="sp">saber</span></td></tr>
+      <tr><td>ser</td><td><span class="ch">soy</span></td><td>voy a <span class="sp">ser</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="box key">
+    <div class="t">The practical consequence</div>
+    <p>A verb you have only ever seen in the dictionary can be used correctly in the futuro pr&oacute;ximo straight away. You do not need to know whether it is regular, stem-changing or irregular, because none of that information is ever used.</p>
+  </div>
+
+  <div class="box tip">
+    <div class="t">Ir in the futuro pr&oacute;ximo</div>
+    <p><em>Ir</em> can be its own infinitive: <em>Voy a ir al cine</em> is correct and common. What you cannot do is drop one of them &mdash; <em>Voy al cine</em> means &ldquo;I am going to the cinema&rdquo; in the present, which is usually close enough that speakers simply use it.</p>
+    <p class="ex" style="margin-bottom:0;">
+      <span class="es">Voy a ir al cine el s&aacute;bado.</span><span class="en">I am going to go to the cinema on Saturday.</span>
+      <span class="es">&iquest;Vas a ir a la fiesta?</span><span class="en">Are you going to go to the party?</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SECTION 2 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">2</span>Negation, Questions and Pronouns<span class="en">Negaci&oacute;n, preguntas y pronombres</span></h1>
+
+  <h2>Negation</h2>
+  <p><strong>No</strong> goes in front of the conjugated <em>ir</em>, never between the pieces of the construction.</p>
+
+  <p class="ex">
+    <span class="es"><strong>No</strong> voy a trabajar el domingo.</span><span class="en">I am not going to work on Sunday.</span>
+    <span class="es">Ella <strong>no</strong> va a venir.</span><span class="en">She is not going to come.</span>
+  </p>
+
+  <h2>Questions</h2>
+  <p>Nothing changes in the verb. A question is marked by intonation and punctuation, with the question word &mdash; if there is one &mdash; at the front.</p>
+
+  <p class="ex">
+    <span class="es">&iquest;Vas a venir?</span><span class="en">Are you going to come?</span>
+    <span class="es">&iquest;Cu&aacute;ndo vas a llamarme?</span><span class="en">When are you going to call me?</span>
+    <span class="es">&iquest;Qu&eacute; van a hacer este fin de semana?</span><span class="en">What are they going to do this weekend?</span>
+  </p>
+
+  <h2>Pronouns have two possible positions</h2>
+  <p>Object pronouns and reflexive pronouns can either go <strong>before the conjugated <em>ir</em></strong> or be <strong>attached to the end of the infinitive</strong>. Both are fully correct and both are common. What you may not do is place the pronoun between <em>a</em> and the infinitive.</p>
+
+  <table class="rules">
+    <thead><tr><th>Structure</th><th>Rule</th><th>Both of these are correct</th></tr></thead>
+    <tbody>
+      <tr><td>Direct object</td><td>Before <em>voy</em>, or attached to the infinitive</td><td><strong>Lo</strong> voy a comprar. / Voy a comprar<strong>lo</strong>.</td></tr>
+      <tr><td>Indirect object</td><td>Same two options</td><td><strong>Te</strong> voy a escribir. / Voy a escribir<strong>te</strong>.</td></tr>
+      <tr><td>Reflexive</td><td>Same two options</td><td><strong>Me</strong> voy a duchar. / Voy a duchar<strong>me</strong>.</td></tr>
+      <tr><td>Two pronouns</td><td>They move together and keep their order</td><td><strong>Te lo</strong> voy a dar. / Voy a d<strong>&aacute;</strong>r<strong>telo</strong>.</td></tr>
+      <tr><td>Negative</td><td><em>No</em> goes first, the pronoun stays with the verb it chose</td><td><strong>No me</strong> voy a duchar. / <strong>No</strong> voy a duchar<strong>me</strong>.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box warn">
+    <div class="t">Never between a and the infinitive</div>
+    <p><em>Voy a me duchar</em> and <em>Voy a lo comprar</em> are both wrong. The pronoun must either move all the way to the front or attach to the back of the infinitive.</p>
+  </div>
+
+  <h2>Reflexive verbs</h2>
+  <p>A reflexive verb behaves exactly like any other. The pronoun still has to agree with the subject, whichever position you choose for it.</p>
+
+  <table class="multi">
+    <thead><tr>
+      <th>Person</th>
+      <th>Pronoun first</th>
+      <th>Attached to the infinitive</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="person">yo</td><td><span class="ch">me</span> voy a levantar</td><td>voy a levantar<span class="ch">me</span></td></tr>
+      <tr><td class="person">t&uacute;</td><td><span class="ch">te</span> vas a levantar</td><td>vas a levantar<span class="ch">te</span></td></tr>
+      <tr><td class="person">&eacute;l / ella / usted</td><td><span class="ch">se</span> va a levantar</td><td>va a levantar<span class="ch">se</span></td></tr>
+      <tr><td class="person">nosotros</td><td><span class="ch">nos</span> vamos a levantar</td><td>vamos a levantar<span class="ch">nos</span></td></tr>
+      <tr><td class="person">vosotros</td><td><span class="ch">os</span> vais a levantar</td><td>vais a levantar<span class="ch">os</span></td></tr>
+      <tr><td class="person">ellos / ellas / ustedes</td><td><span class="ch">se</span> van a levantar</td><td>van a levantar<span class="ch">se</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="box">
+    <div class="t">When an accent is needed</div>
+    <p>Attaching <strong>one</strong> pronoun to an infinitive never needs an accent: <em>comprarlo, ducharme, escribirte, levantarse</em>.</p>
+    <p>Attaching <strong>two</strong> pronouns does, because the stress would otherwise shift: <em>d<strong>&aacute;</strong>rtelo, dec<strong>&iacute;</strong>rmelo, compr<strong>&aacute;</strong>rselo</em>.</p>
+  </div>
+
+  <p class="ex">
+    <span class="es">Me voy a acostar temprano. / Voy a acostarme temprano.</span><span class="en">I am going to go to bed early.</span>
+    <span class="es">No te lo voy a decir. / No voy a dec&iacute;rtelo.</span><span class="en">I am not going to tell you.</span>
+  </p>
+</section>
+
+<!-- ===================== SECTION 3 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">3</span>Futuro Pr&oacute;ximo vs. Futuro Simple<span class="en">Dos maneras de hablar del futuro</span></h1>
+
+  <p>Spanish has a second future, the <em>futuro simple</em>, formed as a single word by adding endings to the whole infinitive: <em>hablar&eacute;, comer&aacute;s, abrir&aacute;</em>. The two overlap heavily, and in most sentences about future events either one is acceptable.</p>
+
+  <table class="multi">
+    <thead><tr>
+      <th>&nbsp;</th>
+      <th>Futuro pr&oacute;ximo<span class="mv">ir + a + infinitivo</span></th>
+      <th>Futuro simple<span class="mv">infinitivo + endings</span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="person">Form</td><td>voy a hablar</td><td>hablar&eacute;</td></tr>
+      <tr><td class="person">Words</td><td>three</td><td>one</td></tr>
+      <tr><td class="person">Register</td><td>spoken and everyday</td><td>written and formal</td></tr>
+      <tr><td class="person">Distance</td><td>near, usually planned</td><td>any distance, often remote</td></tr>
+      <tr><td class="person">Basis</td><td>intention or present evidence</td><td>neutral prediction</td></tr>
+      <tr><td class="person">Irregularity</td><td>only in <em>ir</em></td><td>twelve irregular stems</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The difference in practice</h2>
+
+  <table class="pairs">
+    <thead><tr><th>Futuro pr&oacute;ximo</th><th>Futuro simple</th></tr></thead>
+    <tbody>
+      <tr><td><em>Va a llover.</em><br>The sky is grey right now.</td><td><em>Llover&aacute; ma&ntilde;ana.</em><br>A neutral forecast.</td></tr>
+      <tr><td><em>Voy a llamarte esta noche.</em><br>I have decided to.</td><td><em>Te llamar&eacute;.</em><br>A promise, no stated timing.</td></tr>
+      <tr><td><em>Vamos a ganar.</em><br>Look at the score.</td><td><em>Ganaremos.</em><br>A declaration of faith.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box key">
+    <div class="t">If you are unsure, use the futuro pr&oacute;ximo</div>
+    <p>In speech it is by a wide margin the more common of the two, and in Latin America the one-word future is rare in conversation outside fixed expressions. It is also the safer choice while you are learning, because its only irregularity is a verb you already know.</p>
+  </div>
+
+  <h2>What only the futuro simple can do</h2>
+  <p>The one-word future has a second job that the futuro pr&oacute;ximo cannot take over: expressing a <strong>supposition about the present</strong>. English does this with &ldquo;must be&rdquo; or &ldquo;probably&rdquo;.</p>
+
+  <p class="ex">
+    <span class="es">&iquest;Qu&eacute; hora es? &mdash; Ser&aacute;n las tres.</span><span class="en">What time is it? &mdash; It must be about three.</span>
+    <span class="es">&iquest;D&oacute;nde est&aacute; Marta? &mdash; Estar&aacute; en casa.</span><span class="en">Where is Marta? &mdash; She is probably at home.</span>
+  </p>
+
+  <p><em>Van a ser las tres</em> would mean &ldquo;it is about to be three o'clock&rdquo; &mdash; a statement about the future, not a guess about now.</p>
+</section>
+
+<!-- ===================== SECTION 4 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">4</span>Iba a + Infinitivo<span class="en">El futuro pr&oacute;ximo en el pasado</span></h1>
+
+  <p>Put <em>ir</em> into the imperfect instead of the present and the whole construction shifts into the past. It then describes something that <strong>was going to happen</strong> &mdash; typically a plan that was interrupted, abandoned or overtaken by events.</p>
+
+  <h2>The imperfect of <em>ir</em></h2>
+  <p>Unlike the present, the imperfect of <em>ir</em> is almost regular; only the written accent on the <em>nosotros</em> form needs attention.</p>
+
+  <table class="strip">
+    <thead><tr><th>yo</th><th>t&uacute;</th><th>&eacute;l / ella / usted</th><th>nosotros</th><th>vosotros</th><th>ellos / ellas / ustedes</th></tr></thead>
+    <tbody><tr>
+      <td class="irr"><span class="ch">iba</span></td><td class="irr"><span class="ch">ibas</span></td><td class="irr"><span class="ch">iba</span></td>
+      <td class="irr"><span class="ch">&iacute;bamos</span></td><td class="irr"><span class="ch">ibais</span></td><td class="irr"><span class="ch">iban</span></td>
+    </tr></tbody>
+  </table>
+
+  <h2>How it is used</h2>
+  <p>The structure is identical &mdash; <em>iba</em> + <strong>a</strong> + infinitive &mdash; and the pronoun rules from section 2 carry over unchanged.</p>
+
+  <p class="ex">
+    <span class="es">Iba a llamarte pero me qued&eacute; sin bater&iacute;a.</span><span class="en">I was going to call you but my battery died.</span>
+    <span class="es">&Iacute;bamos a salir pero empez&oacute; a llover.</span><span class="en">We were going to go out but it started raining.</span>
+    <span class="es">&iquest;Qu&eacute; ibas a decir?</span><span class="en">What were you going to say?</span>
+    <span class="es">Se iba a mudar a Madrid pero cambi&oacute; de idea.</span><span class="en">She was going to move to Madrid but changed her mind.</span>
+  </p>
+
+  <div class="box tip">
+    <div class="t">A useful pattern</div>
+    <p><em>Iba a</em> &hellip; <em>pero</em> &hellip; is one of the most productive sentence frames in spoken Spanish. It lets you explain an unfulfilled intention without needing any tense you have not already met.</p>
+  </div>
+
+  <div class="box">
+    <div class="t">Three tenses of ir, three meanings</div>
+    <ul>
+      <li><em><strong>Voy</strong> a estudiar.</em> &mdash; I am going to study. <span class="sub">plan now</span></li>
+      <li><em><strong>Iba</strong> a estudiar.</em> &mdash; I was going to study. <span class="sub">plan then, usually unfulfilled</span></li>
+      <li><em><strong>Fui</strong> a estudiar.</em> &mdash; I went to study. <span class="sub">this is literal movement, not a future</span></li>
+    </ul>
+    <p>The preterite <em>fui a</em> is not a tense of this construction at all &mdash; it is the ordinary verb <em>ir</em> meaning physical movement towards an activity.</p>
+  </div>
+</section>
+
+<!-- ===================== SECTION 5 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">5</span>Common Mistakes<span class="en">Errores frecuentes</span></h1>
+
+  <p>Five things go wrong in practice. Every one of them is mechanical, and none involves the main verb.</p>
+
+  <table class="rules">
+    <thead><tr><th>Not this</th><th>But this</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Voy hablar con &eacute;l.</td><td>Voy <strong>a</strong> hablar con &eacute;l.</td><td>The <em>a</em> is obligatory and has no English equivalent to remind you of it.</td></tr>
+      <tr><td>Voy a hablo con &eacute;l.</td><td>Voy a <strong>hablar</strong> con &eacute;l.</td><td>The second verb stays in the infinitive. Only <em>ir</em> is conjugated.</td></tr>
+      <tr><td>Nosotros va a salir.</td><td>Nosotros <strong>vamos</strong> a salir.</td><td><em>Ir</em> still has to agree with the subject.</td></tr>
+      <tr><td>Voy a me duchar.</td><td><strong>Me</strong> voy a duchar. / Voy a ducharme.</td><td>A pronoun never sits between <em>a</em> and the infinitive.</td></tr>
+      <tr><td>Voy a voy al cine.</td><td><strong>Voy a ir</strong> al cine.</td><td>The infinitive of <em>ir</em> is <em>ir</em>, not a second conjugated form.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box warn">
+    <div class="t">The one to watch</div>
+    <p>Dropping the <strong>a</strong> accounts for more errors than the other four combined, and it survives a long time because the sentence still sounds almost right. Build the habit of hearing <em>voy&nbsp;a</em>, <em>vas&nbsp;a</em>, <em>va&nbsp;a</em> as single units rather than as two separate words.</p>
+  </div>
+
+  <div class="box tip">
+    <div class="t">Va a and vamos a run together in speech</div>
+    <p>Native speakers blend the vowels: <em>va a hablar</em> comes out close to <em>va&rsquo;blar</em>. This is why the <em>a</em> is so easy to miss when listening, and why it is worth writing out deliberately until it is automatic.</p>
+  </div>
+</section>
+
+<!-- ===================== SECTION 6 ===================== -->
+<section class="page">
+  <h1 class="sec"><span class="num">6</span>Summary<span class="en">Resumen</span></h1>
+
+  <div class="oy"><span class="hi">ir</span> &nbsp;+&nbsp; <span class="hi">a</span> &nbsp;+&nbsp; infinitivo</div>
+  <div class="oy-cap">voy &middot; vas &middot; va &middot; vamos &middot; vais &middot; van</div>
+
+  <table class="summary">
+    <thead><tr><th>Question</th><th>Answer</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>What is conjugated?</td><td>only <em>ir</em></td><td>voy a hablar</td></tr>
+      <tr><td>What happens to the main verb?</td><td>nothing &mdash; it stays an infinitive</td><td>voy a poder</td></tr>
+      <tr><td>Where does <em>no</em> go?</td><td>before <em>ir</em></td><td>no voy a hablar</td></tr>
+      <tr><td>Where do pronouns go?</td><td>before <em>ir</em> or attached to the infinitive</td><td>me voy a duchar</td></tr>
+      <tr><td>How do you make it past?</td><td>imperfect of <em>ir</em></td><td>iba a hablar</td></tr>
+      <tr><td>Which future is more common in speech?</td><td>this one</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What to carry away</h2>
+
+  <ul class="clean">
+    <li>The futuro pr&oacute;ximo has <strong>no new endings to learn</strong>. Everything rests on six forms of <em>ir</em> you already know.</li>
+    <li>Because the main verb stays in the infinitive, <strong>no stem change or irregular yo form ever applies</strong>. Any verb in the dictionary can be used immediately.</li>
+    <li>The <strong>a</strong> is obligatory. It is the only part of the construction that carries no meaning and the only part learners leave out.</li>
+    <li>Pronouns have <strong>two equally correct positions</strong>, and never the one in the middle.</li>
+    <li>Swapping <em>voy</em> for <em>iba</em> turns the whole thing into &ldquo;was going to&rdquo; at no extra cost.</li>
+  </ul>
+
+  <div class="box key">
+    <div class="t">The one thing to take away</div>
+    <p>Learn <strong>voy, vas, va, vamos, vais, van</strong> and you can put every verb in Spanish into the future. No other tense gives you that much reach for that little effort.</p>
+  </div>
+</section>
+
+</body>
+</html>
+
