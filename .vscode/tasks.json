@@ -19,23 +19,6 @@
       }
     },
     {
-      "label": "Split Presente (one-time migration)",
-      "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/build/split-presente.ps1"
-      ],
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated"
-      }
-    },
-    {
       "label": "Dump XLSX",
       "type": "shell",
       "command": "powershell",
@@ -53,7 +36,7 @@
       }
     },
     {
-      "label": "Build Verb Flashcards",
+      "label": "Build Cards",
       "type": "shell",
       "command": "powershell",
       "args": [
@@ -61,24 +44,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}/build/make-cards.ps1"
-      ],
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated"
-      }
-    },
-    {
-      "label": "Build Verb Translation Key",
-      "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/build/make-lookup.ps1"
+        "${workspaceFolder}/cards/general/Build-Cards.ps1"
       ],
       "problemMatcher": [],
       "presentation": {
@@ -96,23 +62,6 @@
         "Bypass",
         "-File",
         "${workspaceFolder}/build/count-patterns.ps1"
-      ],
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated"
-      }
-    },
-    {
-      "label": "Build Tense and Pronoun Decks",
-      "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/build/make-decks.ps1"
       ],
       "problemMatcher": [],
       "presentation": {

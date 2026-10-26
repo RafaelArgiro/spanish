@@ -1,20 +1,25 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Spanish Verb Flashcards</title>
-<style>
-@page { size: A4 portrait; margin: 19.05mm 17.78mm; }
+<html lang="es"><head><meta charset="utf-8"><title>Spanish Verb Flashcards</title>
+<style>@page { size: A4 portrait; margin: 19.05mm 17.78mm; }
 *{ box-sizing:border-box; }
 html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-body{ margin:0; font-family: Georgia, "Cambria", "Times New Roman", serif; color:#111; }
+body{ margin:0; font-family: Georgia,"Cambria","Times New Roman",serif; color:#1d2229; }
 .sheet{ display:grid; grid-template-columns: repeat(3, 47.75mm); column-gap:5.9mm; row-gap:2.03mm; justify-content:start; align-content:start; }
 .sheet + .sheet{ break-before:page; }
 .card{ width:47.75mm; height:30mm; border:0.6pt solid #222; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2mm 3mm; overflow:hidden; }
-.card.blank{ border-color:transparent; }
-.es{ font-size:14pt; line-height:1.12; letter-spacing:.01em; }
-.en{ font-size:10.5pt; line-height:1.15; }
-.tag{ position:absolute; bottom:1.1mm; font-family:"Segoe UI","Trebuchet MS",sans-serif; font-size:5pt; letter-spacing:.11em; text-transform:uppercase; color:#8a94a0; }
-.tag.r{ right:1.8mm; }
-.tag.l{ left:1.8mm; }
-</style></head><body>
+.card.blank{ border:none; background:none; }
+.es{ font-size:14pt; line-height:1.14; letter-spacing:.01em; }
+.en{ font-size:10.5pt; line-height:1.16; }
+.formula{ font-size:12.5pt; font-weight:700; line-height:1.15; }
+.models{ font-size:8.6pt; font-style:italic; margin-top:2mm; line-height:1.3; color:#444b54; }
+.note{ font-family:"Segoe UI","Trebuchet MS",sans-serif; font-size:7pt; color:#6b7784; margin-top:2mm; line-height:1.25; }
+.tag{ position:absolute; bottom:1.3mm; font-family:"Segoe UI","Trebuchet MS",sans-serif; font-size:5pt; letter-spacing:.11em; text-transform:uppercase; color:#8a94a0; opacity:.78; }
+.tag.r{ right:2mm; }
+.tag.l{ left:2mm; }
+.t-navy{ background:#eef3f9; border-color:#17365d; } .t-navy .es,.t-navy .formula,.t-navy .en,.t-navy .tag{ color:#17365d; }
+.t-red{  background:#fcecee; border-color:#a62b37; } .t-red .es,.t-red .formula,.t-red .en,.t-red .tag{ color:#a62b37; }
+.t-teal{ background:#e7f3f1; border-color:#0e6258; } .t-teal .es,.t-teal .formula,.t-teal .en,.t-teal .tag{ color:#0e6258; }
+.t-gold{ background:#fdf5e3; border-color:#8a6315; } .t-gold .es,.t-gold .formula,.t-gold .en,.t-gold .tag{ color:#8a6315; }</style></head><body>
 <section class="sheet">
   <div class="card"><div class="es">Ser</div><div class="tag r">Top 100</div></div>
   <div class="card"><div class="es">Estar</div><div class="tag r">Top 100</div></div>
@@ -521,4 +526,3 @@ body{ margin:0; font-family: Georgia, "Cambria", "Times New Roman", serif; color
   <div class="card blank"></div>
 </section>
 </body></html>
-
